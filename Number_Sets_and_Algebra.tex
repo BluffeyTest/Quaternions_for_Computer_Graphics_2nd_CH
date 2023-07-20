@@ -7,11 +7,11 @@
 \subsection{自然数}
 自然数是整数$1,2,3,4$，等等，根据定义(DIN $5473)$，自然数和零$\{0,1,2,3,4,\ldots\}$的集合由符号$\mathbb{N}$表示，我们使用:
 $$
-\mathbb{N}=\{0,1,2,3,4, \ldots\}
+    \mathbb{N}=\{0,1,2,3,4, \ldots\}
 $$
 语句
 $$
-k \in \mathbb{N}
+    k \in \mathbb{N}
 $$
 表示$k$属于集合$\mathbb{N}$，其中$\in$表示属于，或者换句话说，$k$是一个自然数。我们在本书中使用这种符号，以确保对所使用的数字数量的类型没有混淆。
 
@@ -25,7 +25,7 @@ $\mathbb{N}^{*}$用于表示集合$\{1,2,3,4,\ldots\}$，没有零。
 \subsection{整数}
 整数集合 $\mathbb{Z}$ 包含自然数及其负数：
 $$
-\mathbb{Z}=\{\ldots,-3,-2,-1,0,1,2,3, \ldots\}
+    \mathbb{Z}=\{\ldots,-3,-2,-1,0,1,2,3, \ldots\}
 $$
 
 $\mathbb{Z}$ 代表 Zahlen---德语中的 "数字"。
@@ -33,35 +33,35 @@ $\mathbb{Z}$ 代表 Zahlen---德语中的 "数字"。
 \subsection{有理数}
 有理数的集合是 $\mathbb{Q}$ ，包含形式如下的数：
 $$
-\frac{a}{b}, \quad a, b \in \mathbb{Z}, \quad b \neq 0
+    \frac{a}{b}, \quad a, b \in \mathbb{Z}, \quad b \neq 0
 $$
 
 \section{算术运算}
 我们使用算术运算加法、减法、乘法和除法来处理数字，其结果是否封闭或未定义，取决于底层集合。例如，当我们把两个自然数相加时，结果总是另一个自然数，因此，这个运算是封闭的：
 $$
-3+4=7
+    3+4=7
 $$
 但是，当我们用两个自然数相减时，结果不一定是自然数。例如，虽然
 $$
-6-2=4
+    6-2=4
 $$
 是封闭运算符，但是
 $$
-2-6=-4
+    2-6=-4
 $$
 不是封闭的，因为-4 不属于自然数集。
 
 两个自然数的乘积总是一个封闭运算，但是除法会带来一些问题。首先，偶数自然数除以 2 是封闭运算：
 $$
-\frac{16}{2}=8
+    \frac{16}{2}=8
 $$
 而奇数自然数除以偶数自然数得到的是十进制数：
 $$
-\frac{7}{2}=3.5
+    \frac{7}{2}=3.5
 $$
 并不闭合，因为 3.5 不属于自然数集。在集合语言中，这可以写成
 $$
-3.5 \notin \mathbb{N}
+    3.5 \notin \mathbb{N}
 $$
 
 其中 $\notin$ 表示不属于。
@@ -70,353 +70,318 @@ $$
 
 实数不存在任何与自然数相关的问题，加、乘、除运算都是封闭的：
 $$
-\begin{aligned}
-a+b & =c, \quad a, b, c \in \mathbb{R} \\
-a b & =c, \quad a, b, c \in \mathbb{R} \\
-\frac{a}{b} & =c, \quad a, b, c \in \mathbb{R} \text { and } b \neq 0 .
-\end{aligned}
+    \begin{aligned}
+        a+b         & =c, \quad a, b, c \in \mathbb{R}                          \\
+        a b         & =c, \quad a, b, c \in \mathbb{R}                          \\
+        \frac{a}{b} & =c, \quad a, b, c \in \mathbb{R} \text { and } b \neq 0 .
+    \end{aligned}
 $$
 
 \section{公理}
 当我们构建代数表达式时，我们会运用被称为公理的特定法则。对于加法和乘法，我们知道数字的分组对最终结果没有影响：例如，$2+(4+6)=(2+4)+6$ 和 $2 \times(3 \times 4)=(2\times  3)\times 4$。这就是联立公理，其表达式为：
 
 $$
-\begin{aligned}
-a+(b+c) & =(a+b)+c \\
-a(b c) & =(a b) c .
-\end{aligned}
+    \begin{aligned}
+        a+(b+c) & =(a+b)+c   \\
+        a(b c)  & =(a b) c .
+    \end{aligned}
 $$
 我们还知道，在进行加法或乘法运算时，顺序对最终结果没有影响：例如，$2+6=6+2$，$2 \times 6=6 \times 2$。这就是交换公理，其表达式为
 $$
-\begin{aligned}
-a+b & =b+a \\
-a b & =b a .
-\end{aligned}
+    \begin{aligned}
+        a+b & =b+a   \\
+        a b & =b a .
+    \end{aligned}
 $$
 代数表达式包含了一个实数和一串实数的乘积，它们服从分配律:
 
 $$
-\begin{aligned}
-a(b+c) & =a b+a c \\
-(a+b)(c+d) & =a c+a d+b c+b d .
-\end{aligned}
+    \begin{aligned}
+        a(b+c)     & =a b+a c           \\
+        (a+b)(c+d) & =a c+a d+b c+b d .
+    \end{aligned}
 $$
-
-The reason why we have reviewed these axioms is that they should not be regarded as carved in mathematical stone, and apply to everything that is invented. For when we come to quaternions we discover that they do not obey the commutative axiom, which is not that strange. If you have used matrices you will know that matrix multiplication is also non-commutative, but is associative.
+我们回顾这些公理的原因是，它们不应该被认为是刻在数学石头上的，并适用于所有发明的东西。因为当我们谈到四元数时，我们发现它们不遵守交换公理，这并不奇怪。如果你用过矩阵，你会知道矩阵乘法也是不符合交换律的，但它是符合结合律的。
 
 \section{表达式}
-Using the above axioms we are able to construct all sorts of expressions such as:
+使用上述公理，我们可以构造各种表达式，例如:
+$$
+    \begin{gathered}
+        a(2+c)-\frac{d}{e}+a-10 \\
+        \frac{g}{a c-b d}+\frac{h}{d e-f g} .
+    \end{gathered}
+$$
+我们也使用符号来表示一个量的幂，例如$n^{2}$。这个符号引入了另一组观察结果:
 
 $$
-\begin{gathered}
-a(2+c)-\frac{d}{e}+a-10 \\
-\frac{g}{a c-b d}+\frac{h}{d e-f g} .
-\end{gathered}
+    \begin{aligned}
+        a^{n} a^{m}            & =a^{n+m}       \\
+        \frac{a^{n}}{a^{m}}    & =a^{n-m}       \\
+        \left(a^{n}\right)^{m} & =a^{n m}       \\
+        \frac{a^{n}}{a^{n}}    & =a^{0}=1       \\
+        \frac{1}{a^{n}}        & =a^{-1}        \\
+        a^{\frac{1}{n}}        & =\sqrt[n]{a} .
+    \end{aligned}
 $$
-
-We also employ notation for raising a quantity to some power such as $n^{2}$. This notation introduces another set of observations:
-
-$$
-\begin{aligned}
-a^{n} a^{m} & =a^{n+m} \\
-\frac{a^{n}}{a^{m}} & =a^{n-m} \\
-\left(a^{n}\right)^{m} & =a^{n m} \\
-\frac{a^{n}}{a^{n}} & =a^{0}=1 \\
-\frac{1}{a^{n}} & =a^{-1} \\
-a^{\frac{1}{n}} & =\sqrt[n]{a} .
-\end{aligned}
-$$
-
-Next, we have to include all sorts of functions such as square-roots, sines and cosines, which may seem rather innocent. But we must be wary of them. For example, $\sqrt{16}= \pm 4$, whereas, there is no natural or real number solution for $\sqrt{-16}$. Consequently, the expression $\sqrt{a}$ has no real roots if $a<0$. Similarly, when working with trigonometric functions such as sine and cosine, we must remember that these take on a range of values between -1 and +1 , including 0 , which means that if they are employed as a denominator, the result could be undefined. For example, this expression is undefined if $\sin \alpha=0$
+接下来，我们要包括各种各样的函数，比如平方根，正弦和余弦，这些看起来很简单。但我们必须警惕他们。例如，$\sqrt{16}= \pm 4$，而$\sqrt{-16}$没有自然数或实数解。因此，如果$a<0$，表达式$\sqrt{a}$没有实根。类似地，当处理正弦和余弦等三角函数时，我们必须记住，它们的取值范围在-1到+1之间，包括0，这意味着如果它们被用作分母，结果可能是未定义的。例如，如果 $\sin \alpha=0$，下面这个表达式没有定义，
 
 $$
-\frac{a}{\sin \alpha}
+    \frac{a}{\sin \alpha}
 $$
 
 \section{等式}
-Next, we come to equations where we assign the value of an expression to a variable. In most situations the assignment is straightforward and leads to a real result such as
-
+接下来是等式，我们将表达式的值赋给一个变量。 在大多数情况下，赋值都是简单明了的，并会得到一个真实的结果，例如
 $$
-x^{2}-16=0
+    x^{2}-16=0
 $$
-
-where $x= \pm 4$. But what is interesting is that just by reversing the sign to
-
+其中 $x= \pm 4$。但有趣的是，只要将符号反转为
 $$
-x^{2}+16=0
+    x^{2}+16=0
 $$
-
-we create an equation for which there is no real solution. However, there is a complex solution, which is the subject of Chap. 3.
+我们建立了一个没有实数解的方程。不过，有一个复数解，这就是第 3 章的主题。
 
 \section{有序对}
-An ordered pair or couple $(a, b)$ is an object having two entries, coordinates or projections, where the first or left entry, is distinguishable from the second or right entry. For example, $(a, b)$ is distinguishable from $(b, a)$ unless $a=b$. Perhaps the best example of an ordered pair is $(x, y)$ that represents a point in $\mathbb{R}^{2}$, where the order of the entries is always the $x$-coordinate followed by the $y$-coordinate.
+有序对或对偶 $(a,b)$是具有两个条目、坐标或投影的对象，其中第一个条目或左条目可与第二个条目或右条目区分开来。例如，$(a, b)$ 与$(b, a)$ 是可以区分的，除非 $a=b$。$(x, y)$ 表示 $\mathbb{R}^{2}$ 中的一个点，可能是有序对的最好例子，其中条目的顺序总是先是 $x$ 坐标，然后是 $y$ 坐标。
 
-Ordered pairs and ordered triples are widely used in computer graphics to represent points in $\mathbb{R}^{2}:(x, y)$, points in $\mathbb{R}^{3}:(x, y, z)$, and colour values such as $(\mathrm{r}, \mathrm{g}, \mathrm{b})$ and (h, s, v). In these examples, the fields are all real values. There is nothing to stop us from developing an algebra using ordered pairs that behaves like another algebra, and we will do this for complex numbers in Chap. 3 and quaternions in Chap. 6. For the moment, let's explore some ways ordered pairs can be manipulated.
+在计算机图形学中，有序对和有序三元组广泛用于表示$\mathbb{R}^{2}:(x, y)$中的点，$\mathbb{R}^{3}:(x, y, z)$中的点，以及诸如$(\mathrm{r}, \mathrm{g}, \mathrm{b})$和$(h, s, v)$等颜色值。在这些示例中，字段都是实数。没有什么可以阻止我们使用有序对开发一个代数，它的行为就像另一个代数，我们将在第三章对复数和第六章对四元数这样做。现在，让我们探索一些可以操作有序对的方法。
 
-Say we choose to describe a generic ordered pair as
-
+假设我们选择将一般有序对描述为
 $$
-a=\left(a_{1}, a_{2}\right), \quad a_{1}, a_{2} \in \mathbb{R}
+    a=\left(a_{1}, a_{2}\right), \quad a_{1}, a_{2} \in \mathbb{R}
 $$
-
-We will define the addition of two such objects as
-
+我们将把两个这样的对象相加定义为
 $$
-\begin{aligned}
-a & =\left(a_{1}, a_{2}\right) \\
-b & =\left(b_{1}, b_{2}\right) \\
-a+b & =\left(a_{1}+b_{1}, a_{2}+b_{2}\right) .
-\end{aligned}
+    \begin{aligned}
+        a   & =\left(a_{1}, a_{2}\right)               \\
+        b   & =\left(b_{1}, b_{2}\right)               \\
+        a+b & =\left(a_{1}+b_{1}, a_{2}+b_{2}\right) .
+    \end{aligned}
 $$
-
-For example:
-
+举例：
 $$
-\begin{aligned}
-a & =(2,3) \\
-b & =(4,5) \\
-a+b & =(6,8) .
-\end{aligned}
+    \begin{aligned}
+        a   & =(2,3)   \\
+        b   & =(4,5)   \\
+        a+b & =(6,8) .
+    \end{aligned}
 $$
-
-We will define the product as
-
+我们将乘积定义为
 $$
-a b=\left(a_{1} b_{1}, a_{2} b_{2}\right)
+    a b=\left(a_{1} b_{1}, a_{2} b_{2}\right)
+$$
+根据上述数值，得出
+$$
+    a b=(8,15)
 $$
 
-which, using the above values, results in
+记住，我们说了算，规则由我们定义。
 
+另一条规则将控制有序数对如何响应标量乘法。例如
 $$
-a b=(8,15)
+    \begin{aligned}
+        \lambda\left(a_{1}, a_{2}\right) & =\left(\lambda a_{1}, \lambda a_{2}\right), \quad \lambda \in \mathbb{R} \\
+        3(2,3)                           & =(6,9) .
+    \end{aligned}
 $$
-
-Remember, we are in charge, and we define the rules.
-
-Another rule will control how an ordered pair responds to scalar multiplication. For example:
-
+根据上述规则，我们可以写出
 $$
-\begin{aligned}
-\lambda\left(a_{1}, a_{2}\right) & =\left(\lambda a_{1}, \lambda a_{2}\right), \quad \lambda \in \mathbb{R} \\
-3(2,3) & =(6,9) .
-\end{aligned}
+    \begin{aligned}
+        \left(a_{1}, a_{2}\right) & =\left(a_{1}, 0\right)+\left(0, a_{2}\right) \\
+                                  & =a_{1}(1,0)+a_{2}(0,1)
+    \end{aligned}
 $$
-
-With the above rules, we are in a position to write
-
+如果我们用乘积法则将$(1,0)$ 和$(0,1)$ 这两个单位有序对平方，就可以得到
 $$
-\begin{aligned}
-\left(a_{1}, a_{2}\right) & =\left(a_{1}, 0\right)+\left(0, a_{2}\right) \\
-& =a_{1}(1,0)+a_{2}(0,1)
-\end{aligned}
+    \begin{aligned}
+         & (1,0)^{2}=(1,0) \\
+         & (0,1)^{2}=(0,1)
+    \end{aligned}
 $$
+这表明它们的行为与实数类似，并不出人意料。
 
-and if we square these unit ordered pairs $(1,0)$ and $(0,1)$ using the product rule, we obtain
-
-$$
-\begin{aligned}
-& (1,0)^{2}=(1,0) \\
-& (0,1)^{2}=(0,1)
-\end{aligned}
-$$
-
-which suggests that they behave like real numbers, and is not unexpected.
-
-This does not appear to be very useful, but wait and see what happens in the context of complex numbers and quaternions.
+这似乎不是很有用，但请拭目以待，看看在复数和四元数的背景下会发生什么。
 
 \section{群，环和域}
-Mathematicians employ a bewildering range of names to identify their inventions, which seemingly, appear on a daily basis. Even the name 'quaternion' is not original, and appears throughout history often in the context of 'a quaternion of soldiers':
+数学家使用了一系列令人困惑的名称来标识他们的发明，这些发明似乎每天都在出现。就连 "四元数 "这个名字也不是原创的，在历史上经常出现在 "士兵的四人组 "的语境中：
 
-The Romans detached a quaternion or four men for a night guard ... [1].
+\begin{CJK}{UTF8}{gkai}
+    \begin{quotation}
+        罗马人派出四人组(quaternion)或四个人进行夜间守卫...... \cite{bib2-1}.
+    \end{quotation}
+\end{CJK}
 
-Without becoming too formal, let's explore some more mathematical structures that are relevant to the ideas contained in this book.
+在不太正式的情况下，让我们探索一些与本书中包含的思想相关的更多数学结构。
 
 \subsection{群}
-We have already covered the idea of a set, and what it means to belong to a set. We have also discovered that when we apply certain arithmetic operations to members of a set we can secure closure, non-closure, or the result is undefined.
+我们已经讨论了集合的概念，以及属于集合的含义。我们还发现，当对集合的成员应用某些算术运算时，可以确保闭合、非闭合或结果未定义。
 
-When combining sets with arithmetic operations, it is convenient to create another entity: a group, which is a set, together with the axioms describing how elements of the set are combined. The set might contain numbers, matrices, vectors, quaternions, polynomials, etc., and are represented below as $a, b$ and $c$.
+当将集合与算术运算结合在一起时，可以方便地创建另一个实体：一个群，它是一个集合，以及描述集合元素如何组合的公理。该集合可能包含数字、矩阵、向量、四元数、多项式等，并在下面表示为$a, b$和$c$。
 
-The axioms employ the ' $\circ$ ' symbol to represent any binary operation such as ,,$+- \times$. And a group is formed from a set and a binary operation. For example, we may wish to form a group of integers under addition: $(\mathbb{Z},+)$, or we may wish to examine whether quaternions form a group under the operation of multiplication: $(\mathbb{H}, \times)$.
+该公理使用' $\circ$ '符号来表示任何二进制运算，例如$+- \times$。一个群是由一个集合和一个二进制运算组成的。例如，我们可能希望在加法运算下形成一个整数群:$(\mathbb{Z},+)$，或者我们可能希望检查四元数是否在乘法运算下形成一个群:$(\mathbb{H}, \times)$。
 
-To be a group, all the following axioms must hold for the set $S$. In particular, there must be a special identity element $e \in S$, and for each $a \in S$ there must exist an inverse element $a^{-1} \in S$, so that the following axioms are satisfied:
+要成为一个群，以下所有公理必须在集合 $S$ 中成立。 特别是，必须有一个特殊的单位元 $e \in S$ ，而且对于每个 $a \in S$ ，必须存在一个逆元 $a^{-1} \in S$中，这样就满足了以下公理：
 
 $$
-\begin{array}{rlr}
-\text { Closure: } & a \circ b \in S, & a, b \in S . \\
-\text { Associativity: } & (a \circ b) \circ c=a \circ(b \circ c), & a, b, c \in S . \\
-\text { Identity: } & a \circ e=e \circ a=a, & a, e \in S . \\
-\text { Inverse: } & a \circ a^{-1}=a^{-1} \circ a=e, & a, a^{-1}, e \in S .
+    \begin{array}{rlr}
+        \text { 闭合律: }       & a \circ b \in S,                        & a, b \in S .         \\
+        \text { 结合律: } & (a \circ b) \circ c=a \circ(b \circ c), & a, b, c \in S .      \\
+        \text { 单位元: }      & a \circ e=e \circ a=a,                  & a, e \in S .         \\
+        \text { 逆元: }       & a \circ a^{-1}=a^{-1} \circ a=e,        & a, a^{-1}, e \in S .
+    \end{array}
+$$
+
+我们把一个群描述为$(S, \circ)$，其中$S$是集合，$\circ$是运算。例如，$(\mathbb{Z},+)$是加法运算下的整数群，$(\mathbb{R}, \times)$是乘法运算下的实数群。
+
+让我们用三个例子来说明这些公理。$(\mathbb{Z},+)$：整数$\mathbb{Z}$在加法运算下组成一个群:
+$$
+    \begin{array}{rlr}
+        \text { 闭合律: }       & -23+24=1.       \\
+        \text { 结合律: } & (2+3)+4=2+(3+4)=9. \\
+        \text { 单位元: }      & 2+0=0+2=2.         \\
+        \text { 逆元: }       & 2+(-2)=(-2)+2=0.
+    \end{array}
+$$
+
+$(\mathbb{Z}, \times)$：整数$\mathbb{Z}$在乘法下不构成一个群:
+$$
+    \begin{array}{rlr}
+        \text { 闭合律: }       &-2 \times 4=-8.\\
+        \text { 结合律: } &(2 \times 3) \times 4=2 \times(3 \times 4)=24.\\
+        \text { 单位元: }      & 2 \times 1=1 \times 2=2.\\
+        \text { 逆元: }       &2^{-1}=0.5 \quad(0.5 \notin \mathbb{Z}).
 \end{array}
 $$
+同样，整数0没有逆。
 
-We describe a group as $(S, \circ)$, where $S$ is the set and ' $\circ$ ' the operation. For instance, $(\mathbb{Z},+)$ is the group of integers under the operation of addition, and $(\mathbb{R}, \times)$ is the group of reals under the operation of multiplication.
-
-Let's bring these axioms to life with three examples. $(\mathbb{Z},+)$ : The integers $\mathbb{Z}$ form a group under the operation of addition:
-
+$(\mathbb{Q},\times)$：非零有理数组成的乘法下的群：
 $$
-\begin{aligned}
-\text { Closure: } & -23+24=1 \\
-\text { Associativity: } & (2+3)+4=2+(3+4)=9 \\
-\text { Identity: } & 2+0=0+2=2 \\
-\text { Inverse: } & 2+(-2)=(-2)+2=0
-\end{aligned}
-$$
-
-$(\mathbb{Z}, \times)$ : The integers $\mathbb{Z}$ do not form a group under multiplication:
-
-Closure: $-2 \times 4=-8$.
-
-Associativity: $(2 \times 3) \times 4=2 \times(3 \times 4)=24$.
-
-Identity: $2 \times 1=1 \times 2=2$.
-
-Inverse: $2^{-1}=0.5 \quad(0.5 \notin \mathbb{Z})$.
-
-Also, the integer 0 has no inverse.
-
-$(\mathbb{Q}, \times)$ : The group of non-zero rational numbers form a group under multiplication:
-
-$$
-\begin{aligned}
-\text { Closure: } & \frac{2}{5} \times \frac{2}{3}=\frac{4}{15} . \\
-\text { Associativity: } & \left(\frac{2}{5} \times \frac{2}{3}\right) \times \frac{1}{2}=\frac{2}{5} \times\left(\frac{2}{3} \times \frac{1}{2}\right)=\frac{2}{15} . \\
-\text { Identity: } & \frac{2}{3} \times \frac{1}{1}=\frac{1}{1} \times \frac{2}{3}=\frac{2}{3} . \\
-\text { Inverse: } & \frac{2}{3} \times \frac{3}{2}=\frac{1}{1} \quad\left(\text { where } \frac{3}{2}=\left(\frac{2}{3}\right)^{-1}\right) .
-\end{aligned}
+    \begin{array}{rlr}
+        \text { 闭合律: }       & \frac{2}{5} \times \frac{2}{3}=\frac{4}{15} .                                                                                               \\
+        \text { 结合律: } & \left(\frac{2}{5} \times \frac{2}{3}\right) \times \frac{1}{2}=\frac{2}{5} \times\left(\frac{2}{3} \times \frac{1}{2}\right)=\frac{2}{15} . \\
+        \text { 单位元: }      & \frac{2}{3} \times \frac{1}{1}=\frac{1}{1} \times \frac{2}{3}=\frac{2}{3} .                                                                 \\
+        \text { 逆元: }       & \frac{2}{3} \times \frac{3}{2}=\frac{1}{1} \quad\left(\text { 其中 } \frac{3}{2}=\left(\frac{2}{3}\right)^{-1}\right) .
+    \end{array}
 $$
 
 \subsection{阿贝尔群}
-Lastly, an abelian group, named after the Norwegian mathematician Neils Henrik Abel (1802-1829), is a group where the order of elements does not influence the result. i.e. the group is commutative. Thus there are five axioms: closure, associativity, identity element, inverse element, and commutativity:
-
+最后，阿贝尔群以挪威数学家尼尔斯-亨里克-阿贝尔（Neils Henrik Abel，1802-1829 年）的名字命名，是一个元素的顺序不会影响结果的群。因此有五个公理：闭合律、结合律、单位元、逆元和交换律：
 $$
-\text { Commutativity: } a \circ b=b \circ a, \quad a, b \in S \text {. }
+    \text { 交换律: } a \circ b=b \circ a, \quad a, b \in S \text {. }
 $$
 
-For example, the set of integers forms an abelian group under ordinary addition $(\mathbb{Z},+)$. However, because 3 -D rotations do not generally commute, the set of all rotations in 3-D space forms a non-commutative group.
+例如，整数集合在普通加法$(\mathbb{Z},+)$下构成一个无性群。然而，由于 3 -D 旋转一般不换向，三维空间中所有旋转的集合形成了一个非交换群。
 
 \subsection{环}
-A ring is an extended group, where we have a set of objects which can be added and multiplied together, subject to some precise axioms. There are rings of real numbers, complex numbers, integers, matrices, equations, polynomials, etc. A ring is formally defined as a system where $(S,+)$ and $(S, \times)$ are abelian groups and the distributive axioms:
+环是一个扩展群，其中有一组可以相加和相乘的对象，但要遵守一些精确的公理。有实数环、复数环、整数环、矩阵环、方程环、多项式环等。环被正式定义为一个系统，其中$(S,+)$和$(S,\times)$是非良群和分配公理：
 
-Additive associativity: $a+(b+c)=(a+b)+c, \quad a, b, c \in S$.
-
-Multiplicative associativity: $a \times(b \times c)=(a \times b) \times c, \quad a, b, c \in S$.
-
-Distributivity: $a \times(b+c)=(a \times b)+(a \times c), \quad$ and $(a+b) \times c=(a \times c)+(b \times c), \quad a, b, c \in S$.
-
-For example, we already know that the integers $\mathbb{Z}$ form a group under the operation of addition, but they also form a ring, as the set satisfies the above axioms:
-
+环是一个扩展的群，在这里我们有一集合对象，这些对象可以相加和相乘，服从一些精确的公理。有实数环、复数环、整数环、矩阵环、方程环、多项式环等。一个环被正式定义为一个系统，其中$(S,+)$和$(S, \times)$是阿贝尔群和分配律公理:
 $$
-\begin{aligned}
-& 2 \times(3 \times 4)=(2 \times 3) \times 4 \\
-& 2 \times(3+4)=(2 \times 3)+(2 \times 4) \\
-& (2+3) \times 4=(2 \times 4)+(3 \times 4) .
-\end{aligned}
+    \begin{array}{rlr}
+\text{加法结合律:} &a+(b+c)=(a+b)+c, \quad a, b, c \in S.\\
+\text{乘法结合律:} &a \times(b \times c)=(a \times b) \times c, \quad a, b, c \in S.\\
+\text{分配律：} & a \times(b+c)=(a \times b)+(a \times c), \quad \text{和} \\
+ & (a+b) \times c=(a \times c)+(b \times c), \quad a, b, c \in S.
+    \end{array}
+$$
+
+例如，我们已经知道整数$\mathbb{Z}$在加法运算下构成一个群，但它们也构成一个环，因为该集合满足上述公理:
+$$
+    \begin{array}{rlr}
+         & 2 \times(3 \times 4)=(2 \times 3) \times 4 \\
+         & 2 \times(3+4)=(2 \times 3)+(2 \times 4)    \\
+         & (2+3) \times 4=(2 \times 4)+(3 \times 4) .
+    \end{array}
 $$
 
 \subsection{域}
-Although rings support addition and multiplication, they do not necessarily support division. However, as division is such an important arithmetic operation, the field was created to support it, with one proviso: division by zero is not permitted. Thus we have fields of real numbers $\mathbb{R}$, rational numbers $\mathbb{Q}$, and as we shall see, the complex numbers $\mathbb{C}$. However, we will discover that quaternions do not form a field, but they do form what is called a division ring.
+虽然环支持加法和乘法，但它们不一定支持除法。然而，由于除法是如此重要的算术运算，因此创建了该字段来支持除法，但有一个附带条件:不允许除零。因此，我们有实数$\mathbb{R}$的域，有理数$\mathbb{Q}$的域，以及我们将看到的复数$\mathbb{C}$的域。然而，我们会发现四元数并不构成域，但它们确实构成了所谓的除法环。
 
-It follows that every field is a ring, but not every ring is a field.
+由此可见，每个域都是一个环，但并非每个环都是一个域。
 
 \subsection{除法环}
-A division ring or division algebra, is a ring in which every element has an inverse element, with the proviso that the element is non-zero. The algebra also supports non-commutative multiplication. Here is a formal description of the division ring $(S,+, \times)$ : Additive associativity: $(a+b)+c=a+(b+c)$,
-
-Additive commutativity: $a+b=b+a$,
-
-Additive identity $0: 0+a=a+0$,
-
-Additive inverse: $a+(-a)=(-a)+a=0$,
-
-Multiplicative associativity: $(a \times b) \times c=a \times(b \times c)$,
-
-Multiplicative identity $1: 1 \times a=a \times 1$,
-
-Multiplicative inverse: $a \times a^{-1}=a^{-1} \times a=1$,
-
-Distributivity: $a \times(b+c)=(a \times b)+(a \times c)$,
-
+除法环或除法代数是一个环，其中每个元素都有一个逆元素，附带条件是该元素非零。代数也支持非交换乘法。下面是除法环$(S,+, \times)$的正式描述:
 $$
-(b+c) \times a=(b \times a)+(c \times a), \quad a, b, c \in S .
+    \begin{array}{rlr}
+        \text{ 加法结合律: } & (a+b)+c=a+(b+c), & a, b, c \in S .\\
+        \text{加法交换律: } & a+b=b+a,          & a, b \in S .\\
+        \text{加法单位元 0: } & 0: 0+a=a+0,       & a, 0 \in S .\\
+        \text{加法逆元: }  &a+(-a)=(-a)+a=0,    & a, -a \in S .\\
+        \text{乘法结合律: } &(a \times b) \times c=a \times(b \times c),& a, b, c \in S .\\
+        \text{乘法单位元 1: } &1 \times a=a \times 1,& a, 1 \in S .\\
+        \text{乘法逆元: } &a \times a^{-1}=a^{-1} \times a=1,& a,a^{-1}\in S ,a\neq 0.\\
+        \text{分配律: } & a\times(b+c)=(a \times b)+(a \times c), &\text{和}\\
+        &(b+c) \times a=(b \times a)+(c \times a), & a, b, c \in S .
+\end{array}
 $$
 
-In 1877 the German mathematician Ferdinand Georg Frobenius (1849-1917), proved that there are only three associative division algebras: real numbers $\mathbb{R}$, complex numbers $\mathbb{C}$, and quaternions $\mathbb{H}$.
+1877 年，德国数学家费迪南德-乔治-弗罗贝纽斯（Ferdinand Georg Frobenius，1849-1917 年）证明了只有三个联立除法代数：实数 $\mathbb{R}$、复数 $\mathbb{C}$、四元数 $\mathbb{H}$。
 
 \section{总结}
-The objective of this chapter was to remind you of the axiomatic systems underlying algebra, and how the results of arithmetic operations can be open, closed, or undefined. Perhaps some of the ideas of ordered pairs, sets, groups, fields and rings are new, and they have been included as this notation is often used in association with quaternions.
+本章的目的是提醒大家代数的公理系统，以及算术运算的结果可以是开放的、闭合的或未定义的。也许有些有序对、集合、群、域和环的概念是新的，由于这些符号经常与四元数联系在一起使用，所以也包括在内。
 
-All of these ideas emerge again when we consider the algebra of complex numbers and later on, quaternions.
+当我们考虑复数代数以及后来的四元数时，所有这些想法都会再次出现。
 
 \subsection{定义总结}
 \subsubsection*{有序对}
-An object with two distinguishable components: $(a, b)$ such that $(a, b) \neq(b, a)$ unless $a=b$.
-
+具有两个可区分组件的对象:$(a, b)$，使得$(a, b) \neq(b, a)$除非$a=b$。
 \subsubsection*{集合}
-Definition: A set is a collection of objects.
+定义： 集合是对象的集合。
 
-Notation: $k \in \mathbb{Z}$ means $k$ belongs to the set $\mathbb{Z}$.
+符号: $k \in \mathbb{Z}$ 表示 $k$ 属于集合 $\mathbb{Z}$.
 
-$\mathbb{C}:$ Set of complex numbers
 
-$\mathbb{H}:$ Set of quaternions
+$\mathbb{C}:$  复数集
 
-$\mathbb{N}:$ Set of natural numbers
+$\mathbb{H}:$  四元数集
 
-$\mathbb{Q}$ : Set of rational numbers $\mathbb{R}:$ Set of real numbers
+$\mathbb{N}:$  自然数集
 
-$\mathbb{Z}:$ Set of integers.
+$\mathbb{Q}:$  有理数集 
+
+$\mathbb{R}:$  实数集
+
+$\mathbb{Z}:$  整数集.
 
 \subsubsection*{群}
-Definition: A group $(S, \circ)$ is a set $S$ and a binary operation ' $\circ$ ' and the axioms defining closure, associativity, an identity element, and an inverse element.
+定义： 一个群 $(S, \circ)$ 是一个集合 $S$ 和一个二元运算‘$\circ$’以及定义了闭合律、结合律、单位元和逆元的公理。
 
 $$
-\begin{array}{rlr}
-\text { Closure: } & a \circ b \in S, & a, b \in S . \\
-\text { Associativity: } & (a \circ b) \circ c=a \circ(b \circ c), & a, b, c \in S . \\
-\text { Identity: } & a \circ e=e \circ a=a, & a, e \in S . \\
-\text { Inverse: } & a \circ a^{-1}=a^{-1} \circ a=e, & a, a^{-1}, e \in S .
-\end{array}
+    \begin{array}{rlr}
+        \text { 闭合律: }       & a \circ b \in S,                        & a, b \in S .         \\
+        \text { 结合律: } & (a \circ b) \circ c=a \circ(b \circ c), & a, b, c \in S .      \\
+        \text { 单位元: }      & a \circ e=e \circ a=a,                  & a, e \in S .         \\
+        \text { 逆元: }       & a \circ a^{-1}=a^{-1} \circ a=e,        & a, a^{-1}, e \in S .
+    \end{array}
 $$
 
 \subsubsection*{环}
-Definition: A ring is a group whose elements can be added/subtracted and multiplied, using some precise axioms:
-
-Additive associativity: $a+(b+c)=(a+b)+c, \quad a, b, c \in S$.
-
-Multiplicative associativity: $a \times(b \times c)=(a \times b) \times c, \quad a, b, c \in S$.
-
-Distributivity: $a \times(b+c)=(a \times b)+(a \times c), \quad$ and
-
+定义:环是一个群，它的元素可以加/减/乘，使用一些严格的公理:
 $$
-(a+b) \times c=(a \times c)+(b \times c), \quad a, b, c \in S .
-$$
-
-\subsubsection*{域}
-Definition: A field is a ring that supports division.
-
-\subsubsection*{除法环}
-Every element of a division ring has an inverse element, with the proviso that the element is non-zero. The algebra also supports non-commutative multiplication.
-
-Additive associativity: $(a+b)+c=a+(b+c)$,
-
-$$
-\begin{array}{r}
-a, b, c \in S . \\
-a, b \in S . \\
-a, 0 \in S . \\
-a,-a \in S . \\
-a, b, c \in S . \\
-a, 1 \in S .
+    \begin{array}{rlr}
+        \text { 加法结合律: } &a+(b+c)=(a+b)+c, & a, b, c \in S.\\
+        \text { 乘法结合律: } &a \times(b \times c)=(a \times b) \times c, & a, b, c \in S.\\
+        \text { 分配律: } &a \times(b+c)=(a \times b)+(a \times c), & \text{和}\\
+        &(a+b) \times c=(a \times c)+(b \times c), & a, b, c \in S .
 \end{array}
 $$
+\subsubsection*{域}
+定义:域是支持除法的环。
 
-Multiplicative associativity: $(a \times b) \times c=a \times(b \times c)$,
-
-Multiplicative inverse: $a \times a^{-1}=a^{-1} \times a=1$,
-
-$a, a^{-1} \in S, a \neq 0$
-
-Distributivity: $a \times(b+c)=(a \times b)+(a \times c), \quad$ and $(b+c) \times a=(b \times a)+(c \times a), \quad a, b, c \in S$.
-
+\subsubsection*{除法环}
+除法环的每个元素都有一个逆元，但该逆元非零。代数也支持非交换乘法。
+$$
+    \begin{array}{rlr}
+        \text{ 加法结合律: } & (a+b)+c=a+(b+c), & a, b, c \in S .\\
+        \text{加法交换律: } & a+b=b+a,          & a, b \in S .\\
+        \text{加法单位元 0: } & 0: 0+a=a+0,       & a, 0 \in S .\\
+        \text{加法逆元: }  &a+(-a)=(-a)+a=0,    & a, -a \in S .\\
+        \text{乘法结合律: } &(a \times b) \times c=a \times(b \times c),& a, b, c \in S .\\
+        \text{乘法单位元 1: } &1 \times a=a \times 1,& a, 1 \in S .\\
+        \text{乘法逆元: } &a \times a^{-1}=a^{-1} \times a=1,& a,a^{-1}\in S ,a\neq 0.\\
+        \text{分配律: } & a\times(b+c)=(a \times b)+(a \times c), &\text{和}\\
+        &(b+c) \times a=(b \times a)+(c \times a), & a, b, c \in S .
+\end{array}
+$$
 
 \begin{thebibliography}{99}
     \bibitem{bib2-1} Robinson, E.: Greek and English Lexicon of the New Testament (1825). \href{http://books.google}{http://books.google}. \href{http://co.uk}{co.uk}
