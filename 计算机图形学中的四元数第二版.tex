@@ -32,6 +32,23 @@
 \usepackage{indentfirst} 
 \setlength{\parindent}{2em}
 
+% \usepackage{tikz}
+% \usepackage{xcolor}
+% \usepackage{environ}
+% \usepackage{amsmath,mathrsfs,amsfonts}
+% \usepackage{xparse}
+
+% 画外框
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable, theorems}
+
+\usetikzlibrary{shapes,decorations}
+\definecolor{bule}{RGB}{18,29,57}
+\definecolor{bablue}{RGB}{248,248,248}
+\definecolor{main}{RGB}{127,191,51}
+\definecolor{seco}{RGB}{0,145,215}
+\definecolor{thid}{RGB}{180,27,131}
+
 \usepackage{amsthm}
 % 中文定理环境
 \theoremstyle{plain}
@@ -44,11 +61,34 @@
 \newtheorem{definition}{\indent 定义}[section]
 % \newtheorem{example}{\indent 例}[section]
 % \newtheorem{example}{\indent 例}%[chapter]
-\newtheorem{example}{\indent 例}%[chapter]
+% \newtheorem{example}{\indent 例}%[chapter]
 \newtheorem{remark}{\indent 注}[section]
 \newenvironment{solution}{\begin{proof}[\indent\bf 解]}{\end{proof}}
 % \renewcommand{\proofname}{\indent\bf 证明}
 
+
+
+%% 我自己尝试搞定理环境
+\newtheorem{example}{\textcolor{blue}{\indent 例}}[chapter]
+% \renewcommand{\theexample}{\textcolor{main}{\arabic{example}}}
+% \renewcommand{\theexample}{\textcolor{red}{\thesection.\arabic{example}}}
+%\renewcommand{\thedefinition}{\textcolor{blue}{\thedefinition.\arabic{definition}}}
+\newcommand{\newTheStyle}[1]{
+\begin{tcolorbox}[colback=white!5!white,colframe=green!75!white]
+\textbf{#1}
+\end{tcolorbox}
+}
+
+\newenvironment{Li}[1][\introductionname]{
+  \begin{tcolorbox}[colback=white!5!white,colframe=green!75!white]
+  \begin{example}
+  \bfseries
+    %\textbf{#1}
+    
+    }
+    {
+    \end{example}
+  \end{tcolorbox}}
 
 % % English theorem environment
 % \newtheorem{theorem}{Theorem}[section]
@@ -149,6 +189,9 @@
 %更改图表的显示
 \renewcommand{\figurename}{图}
 \renewcommand{\tablename}{表}
+
+
+
 
 \begin{document}
 \begin{CJK}{UTF8}{gkai}
