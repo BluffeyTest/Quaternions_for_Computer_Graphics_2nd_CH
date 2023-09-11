@@ -465,9 +465,7 @@ z^{2} & =(4,3)(4,3) \\
 & =(7,24)
 \end{aligned}
 $$
-
-Let's continue to develop an algebra based upon ordered pairs that is identical to the algebra of complex numbers. We start by writing
-
+我们继续探索一个基于有序对的代数，它和复数代数是一样的。我们先写出
 $$
 \begin{aligned}
 z & =(a, b) \\
@@ -475,11 +473,9 @@ z & =(a, b) \\
 & =a(1,0)+b(0,1)
 \end{aligned}
 $$
+它创建了单位有序对$(1,0)$和$(0,1)$。
 
-which creates the unit ordered pairs $(1,0)$ and $(0,1)$.
-
-Now let's compute the product $(1,0)(1,0)$ :
-
+现在我们来计算乘积$(1,0)(1,0)$
 $$
 \begin{aligned}
 (1,0)(1,0) & =(1-0,0) \\
@@ -487,10 +483,9 @@ $$
 \end{aligned}
 $$
 
-which shows that $(1,0)$ behaves like the real number 1 . i.e. $(1,0)=1$.
+这表明$(1,0)$表现得像实数1。即$(1,0)=1$。
 
-Next, let's compute the product $(0,1)(0,1)$ :
-
+接下来，让我们计算乘积$(0,1)(0,1)$:
 $$
 \begin{aligned}
 (0,1)(0,1) & =(0-1,0) \\
@@ -498,23 +493,18 @@ $$
 \end{aligned}
 $$
 
-which is the real number -1 :
-
+这获得了实数 $-1$ :
 $$
 (0,1)^{2}=-1
 $$
-
-or
-
+或
 $$
-(0,1)=\sqrt{-1} \text { and is imaginary }
+(0,1)=\sqrt{-1} \text { 是一个虚数 }
 $$
-
-This means that the ordered pair $(a, b)$, together with its associated rules, represents a complex number. i.e. $(a, b) \equiv a+b i$.
+这意味着有序对$(a, b)$及其相关规则表示一个复数。即$(a, b) \equiv a+b i$。
 
 \subsection{有序对范数}
-The norm, modulus or absolute value of an ordered pair $z$ is written $|z|$ and by definition is
-
+有序对$z$的范数、模数或绝对值写成$|z|$，被定义为
 $$
 \begin{aligned}
 z & =(a, b) \\
@@ -522,11 +512,10 @@ z & =(a, b) \\
 \end{aligned}
 $$
 
-For example, the norm of $(3,4)$ is 5.
+比如，$(3,4)$的范数是$5$.
 
 \subsection{有序对的复共轭}
-The complex conjugate of $z=a+b i$ is defined as $z^{*}=a-b i$, which in terms of an ordered pair is $z^{*}=(a,-b)$ :
-
+$z=a+b i$的复共轭定义为$z^{*}=a-b i$，其在有序对中表示为$z^{*}=(a,-b)$:
 $$
 \begin{aligned}
 z & =(a, b) \\
@@ -539,8 +528,7 @@ z z^{*} & =(a, b)(a,-b) \\
 $$
 
 \subsection{有序对的商}
-The technique for resolving $z_{1} / z_{2}$ is to multiply the expression by $z_{2}^{*} / z_{2}^{*}$, which using ordered pairs is
-
+解析$z_{1} / z_{2}$的技术是将表达式乘以$z_{2}^{*} / z_{2}^{*}$，使用有序对是
 $$
 \begin{aligned}
 \frac{z_{1}}{z_{2}} & =\frac{\left(a_{1}, b_{1}\right)}{\left(a_{2}, b_{2}\right)} \\
@@ -549,15 +537,11 @@ $$
 & =\left(\frac{a_{1} a_{2}+b_{1} b_{2}}{a_{2}^{2}+b_{2}^{2}}, \frac{b_{1} a_{2}-a_{1} b_{2}}{a_{2}^{2}+b_{2}^{2}}\right) .
 \end{aligned}
 $$
-
-For example, to evaluate
-
+比如，求解
 $$
 \frac{(4,3)}{(3,4)}
 $$
-
-we multiply top and bottom by the complex conjugate $(3,-4)$ :
-
+上下同时乘以共轭复数$(3，-4)$
 $$
 \begin{aligned}
 \frac{(4,3)}{(3,4)} & =\frac{(4,3)(3,-4)}{(3,4)(3,-4)} \\
@@ -567,14 +551,11 @@ $$
 $$
 
 \subsection{有序对的逆}
-We have previously shown that $z^{-1}$ is
-
+我们之前已经证明了$z^{-1}$是
 $$
 z^{-1}=\frac{z^{*}}{z z^{*}}=\frac{z^{*}}{|z|^{2}}
 $$
-
-which using ordered pairs is
-
+这使用有序对表示是
 $$
 \begin{aligned}
 z & =(a, b) \\
@@ -583,15 +564,11 @@ z^{-1} & =\frac{(a,-b)}{(a, b)(a,-b)} \\
 & =\left(\frac{a}{a^{2}+b^{2}}, \frac{-b}{a^{2}+b^{2}}\right) .
 \end{aligned}
 $$
-
-As an illustration, the inverse of $(3,4)$ is
-
+作为一个例子，$(3,4)$的逆是
 $$
 (3,4)^{-1}=\left(\frac{3}{25},-\frac{4}{25}\right)
 $$
-
-Let's test this result by multiplying $(3,4)$ by its inverse:
-
+让我们用$(3,4)$乘以它的逆来测试这个结果:
 $$
 \begin{aligned}
 (3,4)\left(\frac{3}{25},-\frac{4}{25}\right) & =\left(\frac{9}{25}+\frac{16}{25},-\frac{12}{25}+\frac{12}{25}\right) \\
@@ -600,8 +577,7 @@ $$
 $$
 
 \subsection{\boldmath $\pm i$的平方根}
-To find $\sqrt{i}$ we assume that the roots are complex. Therefore, we start with
-
+为了求出$\sqrt{i}$，我们假设根是复根。因此，我们先
 $$
 \begin{aligned}
 \sqrt{i} & =(a, b) \\
@@ -609,36 +585,26 @@ i & =(a, b)(a, b) \\
 (0,1) & =\left(a^{2}-b^{2}, 2 a b\right)
 \end{aligned}
 $$
-
-and equating left and right ordered elements we have
-
+等于左序元素和右序元素
 $$
 \begin{aligned}
 a^{2}-b^{2} & =0 \\
 2 a b & =1 .
 \end{aligned}
 $$
-
-From this we deduce that
-
+由此我们可以推断
 $$
 a=b= \pm \frac{\sqrt{2}}{2}
 $$
-
-Therefore, the roots are
-
+因此，根是
 $$
 \sqrt{i}= \pm \frac{\sqrt{2}}{2}(1,1)
 $$
-
-Let's test this result by squaring each root to ensure the answer is $i$ :
-
+让我们通过平方每个根来测试这个结果，以确保答案是$i$:
 $$
 \left( \pm \frac{\sqrt{2}}{2}\right)^{2}(1,1)(1,1)=\frac{1}{2}(0,2)=(0,1)
 $$
-
-To find $\sqrt{-i}$ we assume that the roots are complex. Therefore, we start with
-
+为了求出$\sqrt{-i}$，我们假设根是复数。因此，我们先
 $$
 \begin{aligned}
 \sqrt{-i} & =(a, b) \\
@@ -646,18 +612,14 @@ $$
 (0,-1) & =\left(a^{2}-b^{2}, 2 a b\right)
 \end{aligned}
 $$
-
-and equating left and right ordered elements we have
-
+等于左序元素和右序元素
 $$
 \begin{aligned}
 a^{2}-b^{2} & =0 \\
 2 a b & =-1
 \end{aligned}
 $$
-
-From this we deduce that
-
+由此我们可以推断
 $$
 \begin{aligned}
 a=b & = \pm \frac{\sqrt{2}}{2} i \\
@@ -665,26 +627,20 @@ a=b & = \pm \frac{\sqrt{2}}{2} i \\
 & = \pm \frac{\sqrt{2}}{2}(-1,1)
 \end{aligned}
 $$
-
-Therefore, the roots are
-
+因此，根是
 $$
 \sqrt{-i}= \pm \frac{\sqrt{2}}{2}(1,-1)
 $$
-
-Let's test this result by squaring each root to ensure the answer is $-i$ :
-
+让我们通过对每个根进行平方来测试这个结果，以确保答案是$-i$:
 $$
 \left( \pm \frac{\sqrt{2}}{2}\right)^{2}(1,-1)(1,-1)=\frac{1}{2}(0,-2)=(0,-1)
 $$
-
-It is obvious from the above definitions that ordered pairs provide an alternative notation for expressing complex numbers, where the imaginary feature is embedded within the product axiom. We will also use ordered pairs to define a quaternion with three imaginary terms, which when incorporated within the product axiom remain hidden.
+从上面的定义可以明显看出，有序对为表示复数提供了另一种符号，其中虚特征嵌入到乘积公理中。我们还将使用有序对来定义具有三个虚项的四元数，当将它们合并到乘积公理中时，它们仍然是隐藏的。
 
 \section{复数的矩阵表示}
-As quaternions have a matrix representation, perhaps we should investigate the matrix representation for a complex number.
+由于四元数具有矩阵表示，也许我们应该研究复数的矩阵表示。
 
-Although I have only hinted that $i$ can be regarded as some sort of rotational operator, this is the perfect way of visualising it. In Chap. 4 we discover that multiplying a complex number by $i$ effectively rotates the number $90^{\circ}$ anti-clockwise. So for the moment, it can be represented by a rotation matrix of $90^{\circ}$ :
-
+虽然我只是暗示了$ i $可以被看作某种旋转算子，但这是把它形象化的完美方式。在第4章中，我们发现将一个复数乘以$i$可以有效地逆时针旋转$90^{\circ}$。所以现在，它可以用$90^{\circ}$的旋转矩阵来表示:
 $$
 i \equiv\left[\begin{array}{cc}
 \cos 90^{\circ} & -\sin 90^{\circ} \\
