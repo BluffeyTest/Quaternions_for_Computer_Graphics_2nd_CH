@@ -66,6 +66,9 @@
 \newenvironment{solution}{\begin{proof}[\indent\bf 解]}{\end{proof}}
 % \renewcommand{\proofname}{\indent\bf 证明}
 
+\newtcbtheorem[number within=chapter]{myexample}{例}%
+  {breakable, enhanced, colback=green!5,colframe=green!35!black,fonttitle=\bfseries}{th}
+%   {colback=green!5,colframe=green!35!black,fonttitle=\bfseries}{th}
 
 
 %% 我自己尝试搞定理环境
@@ -261,7 +264,7 @@
 \include{Introduction}
 \include{Number_Sets_and_Algebra}
 \include{Complex_Numbers}
-% \include{Complex_Plane}
+\include{Complex_Plane}
 % \include{Quaternion_Algebra}
 % \include{3D_Rotation_Transforms}
 % \include{Quaternions_in_Space}
