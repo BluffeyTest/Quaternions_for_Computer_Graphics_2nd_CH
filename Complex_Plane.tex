@@ -15,45 +15,47 @@
 
 这本小册子并没有广泛传播，更糟糕的是，它并没有 Argand 的名字！1813 年，Jacques Français 在一篇论文中重新发表了复平面的想法，并要求最初想法的匿名作者透露自己的身份。Argand 站了出来，他的发明得到了认可，如今复平面被称为 Argand 图。1874 年，Gauthier-Villars 出版社出版了 Argand 著作的第二版\cite{bib4-2}。
 
-Unbeknown to Argand-and everyone else at the time-a Norwegian surveyor Caspar Wessel (1745-1818), had been triangulating Denmark and developing mathematical techniques to simplify his work. One of these ideas was the original idea of adding vectorial quantities, the other was the geometric interpretation of complex numbers.
+当时，挪威测量学家卡斯帕-韦塞尔（Caspar Wessel，1745-1818 年）一直在对丹麦进行三角测量，并开发数学技术来简化工作，但 Argand 和其他人都不知道。其中一个想法是添加矢量的原始想法，另一个是复数的几何解释。
 
-Wessel presented his first and only mathematical paper describing his complex plane to a meeting of the Royal Danish Academy in 1797, and it was published in the Academy's Mémoires in 1799. Wessel's paper remained hidden from the mathematical community for almost a century, when it was discovered in 1895 by the Danish mathematician Sophus Christian Juel (1855-1935). However, although everyone now agrees that Wessel was the first person to invent the complex plane, it still bears Argand's name.
+1797 年， Wessel 在丹麦皇家学院的一次会议上提交了他的第一篇也是唯一一篇描述复平面的数学论文，并于 1799 年发表在学院的《备忘录》上。Wessel 的论文被数学界隐藏了近一个世纪，直到 1895 年才被丹麦数学家索福斯-克里斯蒂安-朱尔（Sophus Christian Juel，1855-1935 年）发现。尽管现在大家都认为 Wessel 是第一个发明复数平面的人，但复数平面仍以 Argand 的名字命名。
 
-But it doesn't end there! The Scottish mathematician Peter Guthrie Tait (18311901), wrote in his book An Elementary Treatise on Quaternions:
+但这并没有结束！苏格兰数学家彼得-加斯里-泰特（ Peter Guthrie Tait,1831-1901 年）在他的著作《四元数初论》中写道："在十七世纪末，沃利斯提出用一条线来表示一元二次方程的不可能根：
 
-Wallis, in the end of the seventeenth century, proposed to represent the impossible roots, of a quadratic equation by going out of the line on which, if real they would have been laid off. His construction is equivalent to the consideration of $\sqrt{-1}$ as a directed unit line perpendicular to that on which real quantities are measured. [3]
+\begin{CJK}{UTF8}{gkai}
+    Wallis 在十七世纪末，提出了表示一元二次方程不可能的根的方法，即离开如果是真实的根就会在其上的直线。他的构造等同于把 $\sqrt{-1}$ 看作一条垂直于实数测量线的有向单位线。\cite{bib4-3}
+\end{CJK}
 
-John Wallis (1616-1703), was a gifted English mathematician [4], and it is believed that Argand, Warren, and others, extended the results of Wallis and De Moivre, who had done some early work on the complex plane.
+约翰-沃利斯（John Wallis，1616-1703 年）是一位天才的英国数学家\cite{bib4-4}，人们相信， Argand, Warren和其他人扩展了 Wallis 和 De Moivre 的成果，他们在复平面方面做了一些早期工作。
 
 \section{复平面}
-One of the people associated with the development of complex numbers was the brilliant Swiss mathematician Leonhard Euler (1707-1783). Euler proved the identity:
-
+杰出的瑞士数学家莱昂哈德-欧拉（Leonhard Euler, 1707-1783 年）是与复数的发展有关的人物之一。欧拉证明了复数的特性：
 $$
     e^{i \theta}=\cos \theta+i \sin \theta
 $$
-
-and when $\theta=\pi$, one of the most beautiful formulae in mathematics emerges:
-
+而当 $\theta=\pi$ 出现时，数学中最美丽的公式之一就出现了：
 $$
     e^{i \pi}=-1
 $$
-
-or
-
+或
 $$
     e^{i \pi}+1=0
 $$
+这整合了五个重要常数：$0,1, e, \pi$ 和 $i$，以及基本算术运算：加法、乘法和指数运算。
 
-which integrates five important constants: $0,1, e, \pi$ and $i$, as well as the basic arithmetic operations: addition, multiplication and exponentiation.
-
-Another consequence of this formula arises when $\theta=\pi / 2$ :
-
+当 $\theta=\pi / 2$ 时，这个公式的另一个结果就产生了：
 $$
     e^{i \pi / 2}=\cos \left(\frac{\pi}{2}\right)+i \sin \left(\frac{\pi}{2}\right)=i
 $$
+因此\footnote{译者注，和网友讨论，并不止这一种结果，正确的结果应该如此：
+    \begin{align*}
+        \begin{aligned}
+            i   & =  \cos (\frac{\pi}{2}+2k\pi)+i\sin(\frac{\pi}{2}+2k\pi) \\
+                & =e^{i({\pi/2}+2k\pi)},\qquad k\in \mathbb{Z}             \\
+            i^i & = e^{-(\pi/2+2k\pi)},\qquad k\in \mathbb{Z}              \\
+        \end{aligned}
+    \end{align*}
 
-therefore,
-
+    是一个完全的实数的实数幂函数，对应多个值，感谢网友“天津-莲子粥（嵌入式）”。}
 $$
     \begin{aligned}
         i^{i} & =\left(e^{i \pi / 2}\right)^{i} \\
@@ -62,55 +64,55 @@ $$
               & \approx 0.207879576 .
     \end{aligned}
 $$
+这表明虚数单位自身的幂等于一个实数!\footnote{译者注，参考上一条脚注，应该是一系列实数。}
 
-which shows that the imaginary unit raised to itself equals a real number!
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[max width=0.55\textwidth, center]{4.1}
+    \caption[short]{带单位圆的复平面}
+    \label{fig:4.1}
+\end{figure}
 
-In Chap. 3 we saw that the powers of imaginary $i$ give rise to two sequences $(1, i,-1,-i, 1, \ldots)$ and $(1,-i,-1, i, 1, \ldots)$ which bear a striking resemblance to the patterns $(x, y,-x,-y, x, \ldots)$ and $(x,-y,-x, y, x, \ldots)$ that arise when rotating about the Cartesian axes in an counter-clockwise and clockwise direction, respectively. This resemblance is no coincidence, as complex numbers belong to a two-dimensional plane called the complex plane, which we will now describe.
+在第三章中，我们看到虚$i$的幂产生了两个序列 $(1, i,-1,-i, 1, \ldots)$ 和 $(1,-i,-1, i, 1, \ldots)$ ，它们与分别沿逆时针和顺时针方向绕笛卡尔轴旋转时产生的模式$(x, y,-x,-y, x, \ldots)$ 和 $(x,-y,-x, y, x, \ldots)$ 惊人地相似。这种相似并非巧合，因为复数属于一个叫做复平面的二维平面，我们现在将描述它。
 
-The complex plane enables us to visualise complex numbers using the horizontal axis to record the real part, and the vertical axis to record the imaginary part, as shown in Fig. 4.1.
+如图\ref{fig:4.1}所示，复数平面使我们能够用横轴记录实部、纵轴记录虚部来直观地表示复数。
 
-The figure also shows a circle with unit radius passing through the points $1, i,-1,-i$, which is the sequence associated with increasing powers of $i$. We can see the positions for $i^{0}=1, i^{1}=i, i^{2}=-1, i^{3}=-i$ and $i^{4}=1$, which suggest that multiplying by $i$ is equivalent to rotating through $90^{\circ}$.
+该图还显示了一个单位半径的圆经过$1, i,-1,-i$，这是与$i$的幂次增加相关的序列。我们可以看到$i^{0}=1, i^{1}=i, i^{2}=-1, i^{3}=-i$和$i^{4}=1$的位置，这表明乘以$i$相当于旋转$90^{\circ}$。
 
-To demonstrate this rotational effect, Fig. 4.2 shows the complex plane with four complex numbers:
-
+为了演示这种旋转效应，图\ref{fig:4.2}给出了带四个复数的复平面:
 $$
     p=2+i, \quad q=-1+2 i, \quad r=-2-i, \quad s=1-2 i
 $$
+它们之间的距离是$90^{\circ}$。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[max width=0.55\textwidth, center]{4.2}
+    \caption[short]{标记4个复数的复平面}
+    \label{fig:4.2}
+\end{figure}
 
-which are $90^{\circ}$ apart. Fig. 4.1 The complex plane with the unit circle
-
-Fig. 4.2 The complex plane with four complex numbers
-\includegraphics[max width=\textwidth, center]{2023_04_20_41f1ceac5a31dc7d1b59g-069}
-
-The point $p$ is rotated $90^{\circ}$ to $q$ by multiplying it by $i$ :
-
+通过将点$p$乘以$i$，将点$p$旋转$90^{\circ}$到$q$:
 $$
     \begin{aligned}
         i(2+i) & =2 i+i^{2} \\
                & =-1+2 i .
     \end{aligned}
 $$
-
-The point $q$ is rotated another $90^{\circ}$ to $r$ by multiplying it by $i$ :
-
+通过乘以$i$，将点$q$再旋转$90^{\circ}$到$r$:
 $$
     \begin{aligned}
         i(-1+2 i) & =-i+2 i^{2} \\
                   & =-2-i
     \end{aligned}
 $$
-
-The point $r$ is rotated another $90^{\circ}$ to $s$ by multiplying it by $i$ :
-
+通过乘以$i$，将点$r$再旋转$90^{\circ}$到$s$:
 $$
     \begin{aligned}
         i(-2-i) & =-2 i-i^{2} \\
                 & =1-2 i
     \end{aligned}
 $$
-
-Finally, the point $s$ is rotated $90^{\circ}$ back to $p$ by multiplying it by $i$ :
-
+最后，通过乘以$i$，将$s$旋转$90^{\circ}$回到$p$:
 $$
     \begin{aligned}
         i(1-2 i) & =i-2 i^{2} \\
@@ -118,108 +120,85 @@ $$
     \end{aligned}
 $$
 
-We also discovered in Chap. 3 that the sequence associated with increasing negative powers: $(1,-i,-1, i, \ldots)$ is a rotation in a clockwise direction, and implies that dividing a complex number by $i$ rotates it $90^{\circ}$ clockwise. However, we showed that $i^{-1}=-i$, and it is much easier to multiply a complex number by $-i$ than divide it by $i$. So let's repeat the above exercise to prove this point.
+在第三章中，我们还发现与增加负幂相关的序列:$(1,-i,-1, i, \ldots)$是顺时针方向的旋转，并且意味着将一个复数除以$i$使其顺时针旋转$90^{\circ}$。然而，我们证明了$i^{-1}=-i$，用$-i$乘以一个复数要比用$i$除以它容易得多。所以让我们重复上面的练习来证明这一点。
 
-The point $p$ is rotated $-90^{\circ}$ to $s$ by multiplying it by $-i$ :
-
+点$p$乘以$-i$被旋转$-90^{\circ}$到$s$:
 $$
     \begin{aligned}
         -i(2+i) & =-2 i-i^{2} \\
-                & =1-2 i
+                & =1-2 i .
     \end{aligned}
 $$
-
-The point $s$ is rotated another $-90^{\circ}$ to $r$ by multiplying it by $-i$ :
-
+点$s$再乘以$-i$旋转$-90^{\circ}$到$r$:
 $$
     \begin{aligned}
         -i(1-2 i) & =-i+2 i^{2} \\
                   & =-2-i .
     \end{aligned}
 $$
-
-The point $r$ is rotated another $90^{\circ}$ to $q$ by multiplying it by $-i$ :
-
+点$r$再乘以$-i$旋转$-90^{\circ}$到$q$，:
 $$
     \begin{aligned}
         -i(-2-i) & =2 i+i^{2} \\
                  & =-1+2 i .
     \end{aligned}
 $$
-
-Finally, the point $q$ is rotated $90^{\circ}$ back to $p$ by multiplying it by $-i$ :
-
+最后，点$q$乘以$-i$被旋转$-90^{\circ}$为$p$:
 $$
     \begin{aligned}
         -i(-1+2 i) & =i-2 i^{2} \\
-                   & =2+i
+                   & =2+i .
     \end{aligned}
 $$
+因此，将一个复数旋转$\pm 90^{\circ}$，乘以$\pm i$。
 
-Thus a complex number is rotated $\pm 90^{\circ}$ by multiplying it by $\pm i$.
-
-In Chap. 3 we saw that the roots of $\sqrt{ \pm i}$ are
-
+在第3章中，我们看到$\sqrt{\pm i}$的根为
 $$
     \begin{aligned}
-         & \sqrt{+i}= \pm \frac{\sqrt{2}}{2}(1+i) \\
-         & \sqrt{-i}= \pm \frac{\sqrt{2}}{2}(1-i)
+         & \sqrt{+i}=\pm \frac{\sqrt{2}}{2}(1+i) \\
+         & \sqrt{-i}=\pm \frac{\sqrt{2}}{2}(1-i)
     \end{aligned}
 $$
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[max width=0.55\textwidth]{2023_04_20_41f1ceac5a31dc7d1b59g-071}
+    \caption[short]{$\sqrt{ \pm i}$的复数根}
+    \label{fig:4.3}
+\end{figure}
+如图\ref{fig:4.3}所示。请注意，每个根之间的距离为$180^{\circ}$，这表明角度与它们的作用有关。例如，$\sqrt{i}$的正根是$\sqrt{2} / 2(1+i)$，距离实轴为$45^{\circ}$。将这个根乘以它自己将它旋转到$i$轴上。同样，负根是$-\sqrt{2} / 2(1+i)$，与实轴的距离为$225^{\circ}$。将这个根乘以它自己将它$225^{\circ}$旋转到$i$轴。对于$\sqrt{-i}$的根也是如此。
 
-and are shown in Fig. 4.3. Note that the individual roots are $180^{\circ}$ apart, which suggests that angles have something to do with their action. For example, the positive root of $\sqrt{i}$ is $\sqrt{2} / 2(1+i)$ and is $45^{\circ}$ from the real axis. Multiplying this root by itself rotates it $45^{\circ}$ to the $i$ axis. Similarly, the negative root is $-\sqrt{2} / 2(1+i)$ and is $225^{\circ}$ from the real axis. Multiplying this root by itself rotates it $225^{\circ}$ to the $i$ axis. The same is true for the roots of $\sqrt{-i}$. Fig. 4.3 The complex roots of $\sqrt{ \pm i}$
 
-\begin{center}
-    \includegraphics[max width=\textwidth]{2023_04_20_41f1ceac5a31dc7d1b59g-071}
-\end{center}
-
-These observations seem to suggest that we can construct a complex number capable of rotating another complex number through any angle. Which is true and is covered next.
+这些观察似乎表明，我们可以构造一个能够将另一个复数旋转任何角度的复数。这是真的，我们接下来会讲到。
 
 \section{极坐标表示法}
-Placing a complex number on the complex plane leads us to polar representation where we form a line from the origin to the complex number as shown in Fig. 4.4. The length of the line is $r$ and equals $\sqrt{a^{2}+b^{2}}$, which is why the norm of a complex number is defined using the Pythagorean formula:
-
+在复平面上放置一个复数，我们将得到极坐标表示法，在极坐标表示法中，从原点到复数形成一条直线，如图\ref{fig:4.4} 所示。这条线的长度是$r$，等于$\sqrt{a^{2}+b^{2}}$，这就是为什么复数的范数是用勾股定理定义的:
 $$
     r=|z|=\sqrt{a^{2}+b^{2}}
 $$
-
-The angle $\theta$ between the line and the real axis is called the argument of $z$ and written:
-
+直线与实轴之间的角度$\theta$称为$z$的参数，表示为:
 $$
     \arg (z)=\theta
 $$
-
-where,
-
+其中
 $$
     \tan \theta=\frac{b}{a}
 $$
+\begin{align*}
+    \text{第一象限：}        & a>0, b>0, & \theta=\arctan \left(\frac{b}{a}\right).       \\
+    \text{第二第三象限：} & a<0,      &
+    \theta=\arctan \left(\frac{b}{a}\right) +\pi.                                              \\
+    \text{第四象限：}        & a>0, b<0, & \theta=\arctan \left(\frac{b}{a}\right)+2 \pi.
+\end{align*}
 
-1st quadrant: $a>0, b>0$,
+\begin{figure}[htbp]
+    \begin{center}
+        \includegraphics[max width=0.5\textwidth]{2023_04_20_41f1ceac5a31dc7d1b59g-072}
+    \end{center}
+    \caption[short]{复数的表示}
+    \label{fig:4.4}
+\end{figure}
 
-$\theta=\arctan \left(\frac{b}{a}\right)$
-
-2nd \& 3rd quadrant: $a<0$,
-
-$$
-    \theta=\arctan \left(\frac{b}{a}\right)+\pi
-$$
-
-4th quadrant: $a>0, b<0$,
-
-$$
-    \theta=\arctan \left(\frac{b}{a}\right)+2 \pi
-$$
-
-Fig. 4.4 Polar
-
-representation of a complex number
-
-\begin{center}
-    \includegraphics[max width=\textwidth]{2023_04_20_41f1ceac5a31dc7d1b59g-072}
-\end{center}
-
-We can see from Fig. 4.4 that the horizontal component of $z$ is $r \cos \theta$ and the vertical component is $r \sin \theta$, which permits us to write
-
+由图\ref{fig:4.4}可知，$z$的水平分量为$r \cos \theta$，垂直分量为$r \sin \theta$，我们可以这样写
 $$
     \begin{aligned}
         z & =a+b i                          \\
@@ -227,30 +206,22 @@ $$
           & =r(\cos \theta+i \sin \theta) .
     \end{aligned}
 $$
-
-As mentioned above, one of Euler's discoveries is the identity relating the power series for $e^{\theta}, \sin \theta$ and $\cos \theta$ :
-
+如之前所述，欧拉的发现之一是$e^{\theta}, \sin \theta$和$\cos \theta$的幂级数的同一性:
 $$
     e^{i \theta}=\cos \theta+i \sin \theta
 $$
-
-which permits us to write
-
+这样我们就可以写出
 $$
     z=r e^{i \theta}
 $$
-
-Armed with this discovery, we are now in a position to revisit the product and quotient of two complex numbers using polar representation. For example, given the following complex numbers:
-
+有了这一发现，我们现在就可以用极坐标形式重新研究两个复数的积和商了。例如，给出以下复数：
 $$
     \begin{aligned}
         z & =r e^{i \theta} \\
         w & =s e^{i \phi}
     \end{aligned}
 $$
-
-their product is
-
+它们的乘积是
 $$
     \begin{aligned}
         z w & =r s e^{i \theta} e^{i \phi}                  \\
@@ -258,23 +229,17 @@ $$
             & =r s[\cos (\theta+\phi)+i \sin (\theta+\phi)]
     \end{aligned}
 $$
-
-So the product of two complex numbers creates a third one with norm
-
+因此，两个复数的乘积会产生第三个复数，其范数为
 $$
     |z w|=r s
 $$
-
-and argument
-
+且参数
 $$
     \arg (z w)=\theta+\phi
 $$
+这里两个角度相加了。
 
-where the angles are added.
-
-Next, the quotient:
-
+接下来是商：
 $$
     \begin{aligned}
         \frac{z}{w} & =\frac{r e^{i \theta}}{s e^{i \phi}}                  \\
@@ -282,62 +247,53 @@ $$
                     & =\frac{r}{s}[\cos (\theta-\phi)+i \sin (\theta-\phi)]
     \end{aligned}
 $$
-
-where the norm is
-
+它的范数是
 $$
     \left|\frac{z}{w}\right|=\frac{r}{s}
 $$
-
-and the argument is
-
+参数是
 $$
     \arg \left(\frac{z}{w}\right)=\theta-\phi
 $$
+这里是两个角度相减了。
 
-where the angles are subtracted.
-
-Let's employ these formulae with an example. Figure 4.5 shows two complex numbers:
-
+让我们举例说明这些公式。图\ref{fig:4.5}显示了两个复数：
 $$
     \begin{gathered}
         z=2+2 i \\
         w=-1+i
     \end{gathered}
 $$
-
-which in polar form are
-
+其极坐标形式为
 $$
     \begin{aligned}
         z & =2 \sqrt{2}\left(\cos 45^{\circ}+i \sin 45^{\circ}\right)=2 \sqrt{2} e^{i \pi / 4}   \\
         w & =\sqrt{2}\left(\cos 135^{\circ}+i \sin 135^{\circ}\right)=\sqrt{2} e^{i 3 \pi / 4} .
     \end{aligned}
 $$
-
-Using normal complex algebra, the product $z w$ is
-
+用普通的复代数，积zw是
 $$
     z w=(2+2 i)(-1+i)=-4
 $$
 
-and using polar form: Fig. 4.5 The product and quotient of two complex numbers
 
-\begin{center}
-    \includegraphics[max width=\textwidth]{2023_04_20_41f1ceac5a31dc7d1b59g-074}
-\end{center}
+\begin{figure}[htbp]
+    \begin{center}
+        \includegraphics[max width=0.5\textwidth]{2023_04_20_41f1ceac5a31dc7d1b59g-074}
+    \end{center}
+    \caption[short]{两个复数的乘积和商}
+    \label{fig:4.5}
+\end{figure}
 
+用极坐标形式:
 $$
     \begin{aligned}
         |z w|      & =2 \sqrt{2} \sqrt{2}=4              \\
         \arg (z w) & =45^{\circ}+135^{\circ}=180^{\circ}
     \end{aligned}
 $$
-
-which encode -4 .
-
-Now let's compute the quotient $z / w$ using normal complex algebra, then the polar form.
-
+这编码了 -4 。
+现在我们用普通复数代数计算商$z / w$，然后求极坐标形式。
 $$
     \begin{aligned}
         \frac{z}{w} & =\frac{(2+2 i)}{(-1+i)} \frac{(-1-i)}{(-1-i)} \\
@@ -345,9 +301,7 @@ $$
                     & =-2 i .
     \end{aligned}
 $$
-
-Next, using polar form:
-
+接下来，用极坐标形式
 $$
     \begin{aligned}
         \left|\frac{z}{w}\right|      & =\frac{2 \sqrt{2}}{\sqrt{2}}=2      \\
