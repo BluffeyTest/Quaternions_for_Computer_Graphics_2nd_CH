@@ -308,23 +308,17 @@ $$
         \arg \left(\frac{z}{w}\right) & =45^{\circ}-135^{\circ}=-90^{\circ}
     \end{aligned}
 $$
+这编码了复数$-2 i$。结果如图\ref{fig:4.5}所示。
 
-which encode the complex number $-2 i$. These results are shown in Fig. 4.5.
-
-We can also use Euler's formula to compute $\sqrt{i}$ as follows:
-
+我们也可以用欧拉公式计算$\sqrt{i}$如下:
 $$
     e^{i \theta}=\cos \theta+i \sin \theta
 $$
-
-substituting $\theta=\pi / 2$ we have
-
+代入$\theta=\pi / 2$
 $$
     e^{i \pi / 2}=\cos \left(\frac{\pi}{2}\right)+i \sin \left(\frac{\pi}{2}\right)=i
 $$
-
-taking the square root of both sides, we have
-
+两边开平方根，得到
 $$
     \begin{aligned}
         \pm e^{i \pi / 4}                                                                 & =\sqrt{i} \\
@@ -332,18 +326,14 @@ $$
         \pm \frac{\sqrt{2}}{2}(1+i)                                                       & =\sqrt{i}
     \end{aligned}
 $$
-
-To find $\sqrt{-i}$ we substitute $\theta=-\pi / 2$ :
-
+为求$\sqrt{-i}$，我们代入$\theta=-\pi / 2$:
 $$
     \begin{aligned}
         e^{-i \pi / 2} & =\cos \left(-\frac{\pi}{2}\right)+i \sin \left(-\frac{\pi}{2}\right)=-i \\
                        & =\cos \left(\frac{\pi}{2}\right)-i \sin \left(\frac{\pi}{2}\right)=-i
     \end{aligned}
 $$
-
-taking the square root of both sides, we have
-
+两边开平方根，得到
 $$
     \begin{aligned}
         \pm e^{-i \pi / 4}                                                                & =\sqrt{-i} \\
@@ -352,13 +342,12 @@ $$
     \end{aligned}
 $$
 
-Higher roots can be found using a similar technique.
+使用类似的技术可以找到更高的根。
 
 \section{转子}
-The polar form brings home the fact that multiplying $z=r e^{i \theta}$ with norm $r$, by $w=s e^{i \phi}$ with norm $s$, creates a third complex number with norm $r s$. Therefore, to avoid scaling $z, w$ must have a norm of unity. Under such conditions, $w$ acts as a rotor. For example, multiplying $4+5 i$ by $1+0 i$ leaves it unscaled and unrotated. However, multiplying $4+5 i$ by $0+i$ rotates it by $90^{\circ}$ without any scaling.
+极坐标形式表明了这样一个事实:将$z=r e^{i \theta}$与范数$r$相乘，再乘以$w=s e^{i \phi}$与范数$s$相乘，就产生了第三个复数，范数为$r s$。因此，为了避免缩放$z, w$必须有一个单位范数。在这种情况下，$w$充当转子。例如，将$4+5 i$乘以$1+0 i$使其保持未缩放和未旋转状态。但是，将$4+5 i$乘以$0+i$将其旋转为$90^{\circ}$而不进行任何缩放。
 
-Therefore, to rotate $2+2 i$ by $45^{\circ}$, we must multiply it by $e^{i \pi / 4}$ :
-
+因此，要将 $2+2 i$ 旋转 $45^{\circ}$ ，必须乘以 $e^{i \pi / 4}$ ：
 $$
     \begin{aligned}
         e^{i \pi / 4}                  & =\cos 45^{\circ}+i \sin 45^{\circ}=\frac{\sqrt{2}}{2}(1+i) \\
@@ -366,20 +355,16 @@ $$
                                        & =2 \sqrt{2} i
     \end{aligned}
 $$
+因此，$e^{i \theta}$可以将任何复数旋转一个角度$\theta$。
 
-So $e^{i \theta}$ rotates any complex number through an angle $\theta$.
-
-To rotate a complex number $x+y i$ through an angle $\theta$ we can multiply it by the rotor $\cos \theta+i \sin \theta$
-
+要将复数 $x+y i$ 旋转一个角度 $\theta$，我们可以将其乘以转子 $cos \theta+i \sin \theta$
 $$
     \begin{aligned}
         x^{\prime}+y^{\prime} i & =(\cos \theta+i \sin \theta)(x+y i)                         \\
                                 & =x \cos \theta-y \sin \theta+i(x \sin \theta+y \cos \theta)
     \end{aligned}
 $$
-
-which in matrix form is:
-
+其矩阵形式为：
 $$
     \left[\begin{array}{r}
             x^{\prime} \\
@@ -392,18 +377,14 @@ $$
             i y
         \end{array}\right]
 $$
-
-Before moving on let's consider the effect the complex conjugate of a rotor has on rotational direction, and we can do this by multiplying $x+y i$ by the rotor $\cos \theta-$ $i \sin \theta$ :
-
+在继续讨论之前，让我们先考虑一下转子的复共轭对旋转方向的影响，我们可以通过将 $x+y i$ 乘以转子 $cos \theta-$ $i \sin \theta$ 来做到这一点：
 $$
     \begin{aligned}
         x^{\prime}+y^{\prime} i & =(\cos \theta-i \sin \theta)(x+y i)                          \\
                                 & =x \cos \theta+y \sin \theta+i(-x \sin \theta+y \cos \theta)
     \end{aligned}
 $$
-
-and in matrix form is
-
+其在矩阵形式中为
 $$
     \left[\begin{array}{r}
             x^{\prime} \\
@@ -416,10 +397,9 @@ $$
             i y
         \end{array}\right]
 $$
+是围绕原点旋转 $-\theta$。
 
-which is a rotation of $-\theta$ about the origin.
-
-Therefore, we define a rotor $\mathbf{R}_{\theta}$ and its conjugate $\mathbf{R}_{\theta}^{\dagger}$ as
+因此，我们将转子 $\mathbf{R}_{\theta}$ 及其共轭 $\mathbf{R}_{\theta}^{\dagger}$ 定义为
 
 $$
     \begin{aligned}
@@ -428,7 +408,7 @@ $$
     \end{aligned}
 $$
 
-where $\mathbf{R}_{\theta}$ rotates $+\theta$, and $\mathbf{R}_{\theta}^{\dagger}$ rotates $-\theta$. Note the use of the dagger $\dagger$ symbol.
+其中 $\mathbf{R}_{\theta}$ 旋转 $+\theta$，而 $\mathbf{R}_{\theta}^{\dagger}$ 旋转 $-\theta$。注意匕首 $\dagger$ 符号的使用。
 
 \section{总结}
 在这一章中，我们发现了利用复平面对复数的图形化解释。欧拉公式 $e^{i \theta}=\cos \theta+i \sin \theta$ 允许我们将复数表示为$e$的虚次幂，从而使我们可以轻松地计算乘积和商。总之，这些想法让我们产生了转子的想法，而转子将使用四元数来开发。
