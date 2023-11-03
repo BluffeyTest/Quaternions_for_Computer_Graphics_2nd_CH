@@ -1,0 +1,108 @@
+
+\chap{三元数和四元数}
+\section{介绍}
+这一章涵盖了 Hamilton 发明四元数之前的时期。它不仅展示了其他数学家的想法，也展示了 Hamilton 一直在努力解决的问题。
+
+\section{一些历史}
+当一群杰出的数学家对同一学科感兴趣时，发现他们中的两个人同时提出同样的发明是很常见的。即使两个这样的人在数学上有不同的优势，他们应该有机会接触到相同的积累数学知识的大厦，并且意识到已经解决的问题和等待解决的问题。
+
+在第4章中，我们看到了 Wessel 和 Argand 是如何发明复平面，并用它来形象化复数的。对于这两个人来说，很不幸的是，他们无法接触到今天无处不在的出版网络和互联网。然而，优先权过去是——现在仍然是——由谁先到达印刷机决定。但正如我们在韦塞尔身上看到的那样，即使是第一个出版也不能保证成名。
+
+四元数的发明也有类似的故事。威廉·罗文·汉密尔顿(William Rowan Hamilton)爵士被认为是四元数代数的发明者，四元数代数成为第一个被发现的非交换代数。可以想象，当他找到了一个问题的解决方案时，他感到多么高兴，他已经思考了十多年了!
+
+这一发明为操作矢量提供了第一个数学框架，尽管这是由美国理论物理学家、化学家和数学家约西亚·威拉德·吉布斯(Josiah Willard Gibbs, 1839-1903)改进的。Hamilton 通过代数和几何途径得到了他的发明，因为他很明显，四元数具有巨大的几何潜力。因此，他立即开始探索如何将四元数应用于物理学，以及它们的矢量和旋转特性。
+
+Hamilton 以及当时几乎所有其他人都不知道，法国社会改革家、杰出的娱乐数学家本杰明-奥林德-罗德里格斯（Benjamin Olinde Rodrigues，1795-1851 年）早在 1840 年就发表了一篇论文，描述了如何通过绕第三轴的单一旋转来表示绕不同轴的两个连续旋转\cite{bib5-1}。更重要的是，Rodrigues 使用标量和三维轴表达了他的解决方案，这比 Hamilton 自己使用标量和矢量的方法早了三年！
+
+
+西蒙·奥特曼(Simon Altmann)在澄清这一事实方面所做的工作可能比其他任何人都多，并广泛发表了他的观点\cite{bib5-2, bib5-3, bib5-4, bib5-5}。不过，现在让我们继续讨论 Hamilton 代数，稍后再回到它的旋转特性和 Rodrigues 博士。
+
+复数的存在为 18 和 19 世纪的数学家提出了一个诱人的问题。是否存在 3 -D 等价物？这个问题的答案并不明显，包括高斯(Gauss)、莫比乌斯(Möbius)、格拉斯曼(Grassmann)和 Hamilton 在内的许多天才数学家一直在寻找答案。
+
+Hamilton 的研究有据可查，从 19 世纪 30 年代初到 1843 年他发明了四元数。在此后的 22 年里，直到 1865 年去世，他一直专注于这一课题。到 1833 年，他已经证明复数构成了偶数代数，即有序对\cite{bib5-6}。
+
+\section{三元数}
+Hamilton 将自己的想法记录在笔记本上，他在笔记本上概述了导致他发现的事件。其中一个条目是
+
+\begin{CJK}{UTF8}{gkai}
+    今天上午，我被引向了一个在我看来可能会有有趣发展的四元数理论。假定耦合是已知的，并且已知可以用平面中的点来表示，因此 $\sqrt{-1}$ 与 1 垂直，那么自然可以设想可能存在另一种 $\sqrt{-1}$ ，与平面本身垂直。让这个新的虚数为 $j$ : 因此 $j^{2}=-1$. 空间中的一个点 $x, y, z$ 可以表示三元数 $x+i y+j z$。\cite{bib5-7}
+\end{CJK}
+
+这个条目显示了汉密尔顿的想法，即一个二维复数可以用 $x+i y$ 表示，一个三维复数也可以用三元来表示：$x+i y+j z$，其中$i$和$j$是平方为$-1$的虚量。然而，这样一个三元组的平方在代数展开时会产生问题：
+$$
+    \begin{aligned}
+        z     & =x+i y+j z                                                 \\
+        z^{2} & =(x+i y+j z)(x+i y+j z)                                    \\
+              & =x^{2}+i x y+j x z+i x y-y^{2}+i j y z+j x z+j i y z-z^{2} \\
+              & =x^{2}-y^{2}-z^{2}+2 i x y+2 j x z+2 i j y z .
+    \end{aligned}
+$$
+平方运算几乎是闭合的，除了 $2 i j y z$ 项。
+
+\subsection{三元数的加减法}
+虽然 Hamilton 三元数在平方时无法闭合，但它们很容易相加或相减：
+$$
+    \begin{aligned}
+        z_{1}           & =a_{1}+b_{1} i+c_{1} j                                                           \\
+        z_{2}           & =a_{2}+b_{2} i+c_{2} j                                                           \\
+        z_{1} \pm z_{2} & =a_{1} \pm a_{2}+\left(b_{1} \pm b_{2}\right) i+\left(c_{1} \pm c_{2}\right) j .
+    \end{aligned}
+$$
+
+Hamilton 写信给他的儿子阿奇博尔德(Archibald):
+
+\begin{CJK}{UTF8}{gkai}
+    1843年10月上旬的每天早晨 我去吃早饭时 你兄弟威廉-埃德温( William Edwin)和你都会问我 "爸爸 你会三元数乘法吗" 我总是无奈地摇摇头回答说："不会，我只会它们的加减法。" \cite{bib5-8}
+\end{CJK}
+
+如上所述，三元数的问题出在它们的平方上，即如何处理 $2 i j y z$ 项。Hamilton 的笔记本反映了这种想法：
+
+\begin{CJK}{UTF8}{gkai}
+    这个三元组$[x+i y+j z]$的平方是$x^{2}-y^{2}-z^{2}+2 i x y+2 j x z+$$2 i j y z$; 至少一开始我是这样认为的，因为我认为$i j=j i$。另一方面，如果这是表示与$1,0,0$和$x, y, z$成比例的第三个比例，将其视为线的标记(即以具有这些坐标的点为终点的线，而它们以原点为起点)，并且假设这第三个比例的长度与1和$\sqrt{\left(x^{2}+y^{2}+z^{2}\right)}$成第三个比例，距离$1,0,0$的距离是$x, y, z$的两倍;那么它的实部应该是$x^{2}-y^{2}-z^{2}$它的两个虚部应该是对于系数$2 x y$和$2 x z$;因此，$2 i j y z$这项出现似乎是不恰当的，我一开始就被引导假设了$i j=0$。
+        不过，我发现只要假设 $j i=-i j$ 就可以消除这个困难。\cite{bib5-9}
+\end{CJK}
+
+\section{四元数的诞生}
+三元数的非闭和性对 Hamilton 来说是一个真正的问题，因为他花了十多年的时间试图解决这个问题。Hamilton 试图解释两条线段的乘积，他灵机一现，引入了第三个假想项$k$，使得$k=i j$。英国社会学家、哲学家和科学史学家安德鲁·皮克林(Andrew Pickering)指出:
+
+\begin{CJK}{UTF8}{gkai}
+    引入新的虚数$k$，定义为$i$和$j$的乘积，这使得 Hamilton 在考虑两个任意三元组的乘积时，能够同时用代数和几何表示，这是一种新的适应，这种适应有一个方面值得强调。这相当于两个代表制的桥头堡发生了巨大的变化。更准确地说，它包括定义一个新的桥头堡，从复杂代数的两位表示到不是三位而是四位系统——这种系统很快被称为四元数。\cite{bib5-10}
+\end{CJK}
+
+
+
+引入第三个虚项只是解决方法的一部分；无法解决的是控制 $i、j$ 和 $k$ 的代数规则。最后，1843 年 10 月 16 日，汉密尔顿与妻子汉密尔顿夫人在爱尔兰皇家运河边散步，主持爱尔兰皇家学院的一次会议时，灵光一闪，他看到了如何解决三个虚项 $i、j$ 和 $k$ 它们的所有乘积。\cite{bib5-11}
+
+解法是 $z=a+b i+c j+d k$，其中 $i,j,k$ 都平方到$ -1$ 。因为有四个项，所以 Hamilton 将其命名为 "四元数"。汉密尔顿借此机会在当时路过的布鲁姆桥（Broome bridge）的桥壁上刻下了这一规则，将这一事件记录在石头上。虽然他最初的题词经不起爱尔兰多年的风吹雨打，但现在一块更永久的牌匾取代了它。
+
+当 Hamilton 发明四元数时，他还创造了各种名称，如张量、矢量和向量来描述它们的属性。作为发明者， Hamilton 有权选择他想要的任何名称，而在当时，这些名称都与那个时期的符号有关。例如，他把四元数的实部称为标量，虚部称为矢量。然而今天，矢量与虚部没有任何关联，这就使四元数的解释略显混乱。
+
+Simon Altmann 非常清楚这些问题，并通过对四元数代数进行迄今为止所缺乏的严密审查，帮助澄清了这一困惑。这种严谨的代数学采用了有序对的思想，易于理解，并揭示了四元数与复数之间的密切关系。
+
+让我们来研究一下四元数代数，它构成了 $\mathbb{H}$ 集，以表彰汉密尔顿的成就。
+
+\begin{thebibliography}{99}
+    \bibitem{bib5-1} Cheng, H., Gupta, K.C.: An historical note on finite rotations. Trans. ASME J. Appl. Mech. 56(1), 139-145 (1989)
+
+    \bibitem{bib5-2} Altmann, S.L.: Rotations, Quaternions and Double Groups, Dover, (2005), p. 16, ISBN-13: 978-0-486-44518-2 (1986)
+
+    \bibitem{bib5-3} Altmann, S.L.: Rodrigues, and the quaternion scandal. Math. Mag. 62(5), 291-308 (1989)
+
+    \bibitem{bib5-4} Altmann, S.L.: Icons and Symmetries. Clarendon Press, Oxford (1992)
+
+    \bibitem{bib5-5} Altmann, S.L., Ortiz, E.L. (eds.): Mathematics and Social Utopias in France: Olinde Rodrigues and his Times, History of Mathematics, vol. 28. Am. Math. Soc, Providence (2005). 10: 08218-3860-1, ISBN-13: 978-0-8218-3860-0
+
+    \bibitem{bib5-6} Hamilton, W.R.: The Mathematical Papers of Sir William Rowan Hamilton, vol. I, Geometrical Optics; Conway, A.W., McDonnell, A.J. (eds.) vol. II, Dynamics; Halberstam, H., Ingram, R.E. (eds.) vol. III, Algebra, Cambridge University Press, Cambridge, (1931, 1940, 1967) (1833)
+
+    \bibitem{bib5-7} Hersh, R. (ed): 18 Unconventional Essays on the Nature of Mathematics, Pickering, A.: Concepts and the Mangle of Practice Constructing Quaternions, p. 263. Springer, Berlin (2006). ISBN 978 0-387-25717-9
+
+    \bibitem{bib5-8} Crowe, M.J.: A History of Vector Analysis. Dover, New York (1994)
+
+    \bibitem{bib5-9} Hersh, R. (ed): 18 Unconventional Essays on the Nature of Mathematics, Pickering, A.: Concepts and the Mangle of Practice Constructing Quaternions, p. 264. Springer, Berlin (2006). ISBN 978 0-387-25717-9
+
+    \bibitem{bib5-10} Hersh, R. (ed): 18 Unconventional Essays on the Nature of Mathematics, Pickering, A.: Concepts and the Mangle of Practice Constructing Quaternions, p. 270. Springer, Berlin (2006). ISBN 978 0-387-25717-9
+
+    \bibitem{bib5-11} Hamilton, W.R.: \href{http://www-history.mcs.st-andrews.ac.uk/Mathematicians/Hamilton.html}{http://www-history.mcs.st-andrews.ac.uk/Mathematicians/Hamilton.html}
+
+
+\end{thebibliography}
